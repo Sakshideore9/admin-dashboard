@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure File Sharing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Secure File Sharing Platform</h1>
+  </header>
+
+  <main>
+    <!-- Admin Login Section -->
+    <section id="loginSection">
+      <h2>Admin Login</h2>
+      <form id="adminLoginForm">
+        <input type="text" id="adminUsername" placeholder="Username" required>
+        <input type="password" id="adminPassword" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </section>
+
+    <!-- Upload Section -->
+    <section id="uploadSection" style="display:none">
+      <h2>Upload File</h2>
+      <form id="uploadForm">
+        <input type="file" id="fileInput" required><br>
+        <label>Expiration:</label>
+        <select id="expiry">
+          <option value="10">10 mins</option>
+          <option value="60">1 hour</option>
+          <option value="1440">1 day</option>
+        </select><br>
+        <label>Password (optional):</label>
+        <input type="password" id="password"><br>
+        <button type="submit">Upload</button>
+      </form>
+      <div id="uploadResult"></div>
+    </section>
+
+    <!-- Download Log Section -->
+    <section id="logSection" style="display:none">
+      <h2>Download Logs</h2>
+      <div id="fileLogs"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
